@@ -17,23 +17,24 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://thandululo.tech"),
-  title: "Thandululo Technologies | Full Stack Developer & Founder",
+  title: "THANDULULO TECHNOLOGIES | Digital Solutions Company",
   description:
-    "Premium landing page for Thandululo Nengovhela, founder of THANDULULO TECHNOLOGIES and creator of Gradiate.",
+    "THANDULULO TECHNOLOGIES builds digital products, web platforms, and modern software solutions, including Gradiate.",
   keywords: [
-    "Thandululo Nengovhela",
     "THANDULULO TECHNOLOGIES",
-    "Full Stack Developer",
+    "Digital solutions company",
+    "Web platforms",
+    "Business websites",
+    "Educational technology",
     "Gradiate",
     "South Africa",
-    "Next.js portfolio",
   ],
   openGraph: {
-    title: "Thandululo Technologies",
+    title: "THANDULULO TECHNOLOGIES",
     description:
-      "Building practical digital products, student-focused platforms, and modern web experiences.",
+      "Building scalable digital products, web platforms, and smart software solutions with an impact-driven approach.",
     url: "https://thandululo.tech",
-    siteName: "Thandululo Technologies",
+    siteName: "THANDULULO TECHNOLOGIES",
     type: "website",
   },
 };
