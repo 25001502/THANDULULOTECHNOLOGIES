@@ -15,14 +15,14 @@ export function Navbar({ brand, links, cta }: NavbarProps) {
           <div className="navbar-start min-w-0">
             <a href="#top" className="flex min-w-0 items-center gap-3">
               <div className="shadow-glow flex size-11 shrink-0 items-center justify-center rounded-full bg-primary/15 font-mono text-sm font-semibold text-primary">
-                TN
+                {brand.monogram}
               </div>
               <div className="min-w-0">
                 <p className="truncate text-sm font-semibold uppercase tracking-[0.16em] text-base-content">
                   {brand.name}
                 </p>
                 <p className="truncate font-mono text-[0.68rem] uppercase tracking-[0.24em] text-base-content/45">
-                  {brand.domain}
+                  Digital Solutions Company
                 </p>
               </div>
             </a>

@@ -30,7 +30,11 @@ export default function Home() {
         <SolutionsSection services={siteContent.services} />
         <ProjectsSection projects={siteContent.projects} />
         <WhyChooseUsSection reasons={siteContent.reasons} />
-        <FounderNoteSection founder={siteContent.founder} hasAvatar={hasAvatar} />
+        <FounderNoteSection
+          founder={siteContent.founder}
+          brand={siteContent.brand}
+          hasAvatar={hasAvatar}
+        />
         <ContactSection contact={siteContent.contact} />
       </main>
       <Footer brand={siteContent.brand} links={siteContent.navigation} />

@@ -10,7 +10,7 @@ export function ProjectsSection({ projects }: ProjectsSectionProps) {
   const [featuredProject, ...otherProjects] = projects.items;
 
   return (
-    <section id="projects" className="section-shell">
+    <section id="products" className="section-shell">
       <div className="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:space-y-10 lg:px-8">
         <SectionHeading
           eyebrow={projects.eyebrow}

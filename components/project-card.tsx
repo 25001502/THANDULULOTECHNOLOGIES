@@ -25,7 +25,7 @@ export function ProjectCard({ project, featured = false }: ProjectCardProps) {
               {project.category}
             </span>
             <span className="font-mono text-xs uppercase tracking-[0.24em] text-base-content/40">
-              {featured ? "Main Highlight" : "Capability Sample"}
+              {featured ? "Featured Company Work" : "Strategic Solution"}
             </span>
           </div>
 

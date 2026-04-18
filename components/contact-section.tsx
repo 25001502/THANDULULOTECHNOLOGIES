@@ -21,13 +21,14 @@ export function ContactSection({ contact }: ContactSectionProps) {
         <div className="grid gap-5 lg:grid-cols-[minmax(0,1.1fr)_minmax(280px,0.9fr)]">
           <article className="glass-panel rounded-[34px] p-7 sm:p-8 lg:p-10">
             <p className="font-mono text-xs uppercase tracking-[0.28em] text-base-content/45">
-              Direct Contact
+              Company Contact
             </p>
             <h3 className="mt-5 text-balance text-3xl font-semibold text-base-content sm:text-4xl">
               {contact.primaryCta.label}
             </h3>
             <p className="mt-4 max-w-2xl text-pretty text-base leading-8 text-base-content/70">
-              Email is the fastest route for project work, collaborations, and serious product conversations.
+              Email is the fastest route for solution briefs, product discussions,
+              and business inquiries.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center gap-4">
@@ -42,7 +43,7 @@ export function ContactSection({ contact }: ContactSectionProps) {
                 href={contact.primaryCta.href}
                 className="rounded-full border border-white/10 bg-black/25 px-5 py-3 font-mono text-sm text-base-content/82 hover:border-primary/35 hover:bg-primary/10"
               >
-                hello@thandululo.tech
+                {contact.email}
               </a>
             </div>
           </article>

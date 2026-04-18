@@ -22,16 +22,23 @@ export function AboutSection({ about }: AboutSectionProps) {
             <p className="mt-8 max-w-2xl text-pretty text-base leading-8 text-base-content/70 sm:text-lg">
               {about.body}
             </p>
+            <div className="mt-8 rounded-[28px] border border-white/10 bg-black/25 p-5">
+              <p className="font-mono text-xs uppercase tracking-[0.28em] text-primary">
+                Founder Context
+              </p>
+              <p className="mt-3 text-sm leading-7 text-base-content/68">
+                {about.founderNote}
+              </p>
+            </div>
             <div className="mt-8 flex flex-wrap gap-3">
-              <span className="badge badge-outline rounded-full border-white/10 bg-white/5 px-4 py-4 text-sm text-base-content/75">
-                South Africa based
-              </span>
-              <span className="badge badge-outline rounded-full border-white/10 bg-white/5 px-4 py-4 text-sm text-base-content/75">
-                Full stack delivery
-              </span>
-              <span className="badge badge-outline rounded-full border-white/10 bg-white/5 px-4 py-4 text-sm text-base-content/75">
-                Startup-minded execution
-              </span>
+              {about.focusAreas.map((item) => (
+                <span
+                  key={item}
+                  className="badge badge-outline rounded-full border-white/10 bg-white/5 px-4 py-4 text-sm text-base-content/75"
+                >
+                  {item}
+                </span>
+              ))}
             </div>
           </div>
 
