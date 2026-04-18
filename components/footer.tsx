@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Send, Twitter } from "lucide-react";
+import { GitBranch, Link, Mail, Send, X } from "lucide-react";
 import type { BrandContent, FooterContent } from "@/data/site-content";
 
 type FooterProps = {
@@ -7,9 +7,9 @@ type FooterProps = {
 };
 
 const socialIconMap: Record<string, typeof Mail> = {
-  GitHub: Github,
-  LinkedIn: Linkedin,
-  Twitter: Twitter,
+  GitHub: GitBranch,
+  LinkedIn: Link,
+  Twitter: X,
   Email: Mail,
 };
 
