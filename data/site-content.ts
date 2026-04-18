@@ -141,6 +141,53 @@ export type ContactContent = {
   socials: SocialItem[];
 };
 
+export type TestimonialItem = {
+  stars: number;
+  heading: string;
+  quote: string;
+  name: string;
+  role: string;
+  location: string;
+};
+
+export type TestimonialsContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: TestimonialItem[];
+};
+
+export type FaqItem = {
+  question: string;
+  answer: string;
+};
+
+export type FaqContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  items: FaqItem[];
+};
+
+export type CtaBannerContent = {
+  title: string;
+  description: string;
+  cta: ActionLink;
+};
+
+export type FooterColumn = {
+  heading: string;
+  links: NavLink[];
+};
+
+export type FooterContent = {
+  newsletterDescription: string;
+  newsletterPlaceholder: string;
+  columns: FooterColumn[];
+  socials: { label: string; href: string }[];
+  legal: string;
+};
+
 export const siteContent = {
   brand: {
     name: "THANDULULO TECHNOLOGIES",
@@ -493,4 +540,129 @@ export const siteContent = {
       },
     ],
   } satisfies ContactContent,
+  testimonials: {
+    eyebrow: "Testimonials",
+    title: "What Our Clients Say",
+    description:
+      "Read the success stories and feedback from businesses and partners who chose THANDULULO TECHNOLOGIES for their digital needs.",
+    items: [
+      {
+        stars: 5,
+        heading: "Exceptional Web Delivery",
+        quote:
+          "The team delivered a clean, modern web platform that exceeded our expectations. Highly professional and detail-oriented throughout the entire project.",
+        name: "Sipho Dlamini",
+        role: "Business Owner",
+        location: "South Africa, Gauteng",
+      },
+      {
+        stars: 5,
+        heading: "Reliable & Skilled",
+        quote:
+          "THANDULULO TECHNOLOGIES built us a digital solution that works seamlessly. Their communication and execution were top-notch from start to finish.",
+        name: "Ayanda Mokoena",
+        role: "Operations Manager",
+        location: "South Africa, KZN",
+      },
+      {
+        stars: 5,
+        heading: "Trusted Technology Partner",
+        quote:
+          "From concept to launch, the team guided us through every step. Their knowledge of web platforms and business systems is impressive.",
+        name: "Lerato Ndlovu",
+        role: "Startup Founder",
+        location: "South Africa, Cape Town",
+      },
+    ],
+  } satisfies TestimonialsContent,
+  faq: {
+    eyebrow: "FAQ",
+    title: "Frequently Asked Questions",
+    description:
+      "Find answers to common questions about THANDULULO TECHNOLOGIES' services, process, and project delivery.",
+    items: [
+      {
+        question: "What types of projects does THANDULULO TECHNOLOGIES take on?",
+        answer:
+          "We specialize in web applications, business websites, educational platforms, and full-stack digital systems — from early concept through to launch.",
+      },
+      {
+        question: "How do I start a project with your company?",
+        answer:
+          "Simply reach out via our contact section with a brief overview of your idea or requirements. We'll schedule a discussion to scope out the right solution.",
+      },
+      {
+        question: "Do you work with startups and small businesses?",
+        answer:
+          "Absolutely. We work with startups, small businesses, and growing organizations that need strong digital foundations built efficiently and professionally.",
+      },
+      {
+        question: "What technologies do you build with?",
+        answer:
+          "Our primary stack includes Next.js, React, TypeScript, Firebase, and Tailwind CSS — chosen for performance, scalability, and modern product quality.",
+      },
+      {
+        question: "Can you build and maintain my platform long-term?",
+        answer:
+          "Yes. We offer both project-based builds and ongoing support arrangements to help your platform grow and stay current after launch.",
+      },
+      {
+        question: "How long does a typical project take?",
+        answer:
+          "Timelines vary based on scope. A business website typically takes 2–4 weeks. Larger platforms and systems are scoped and planned in detail before work begins.",
+      },
+    ],
+  } satisfies FaqContent,
+  ctaBanner: {
+    title: "Start Your Digital Journey Today",
+    description:
+      "Whether you need a web platform, a business website, or a full product build — THANDULULO TECHNOLOGIES is ready to deliver. Get in touch and let's build something great.",
+    cta: { label: "Get In Touch", href: "#contact" },
+  } satisfies CtaBannerContent,
+  footer: {
+    newsletterDescription:
+      "Stay updated with new products, technology insights, and company news from THANDULULO TECHNOLOGIES.",
+    newsletterPlaceholder: "Enter your email",
+    columns: [
+      {
+        heading: "Company",
+        links: [
+          { label: "Home", href: "#top" },
+          { label: "About Us", href: "#about" },
+          { label: "Our Work", href: "#products" },
+          { label: "Testimonials", href: "#testimonials" },
+          { label: "FAQ", href: "#faq" },
+        ],
+      },
+      {
+        heading: "Services",
+        links: [
+          { label: "Web Applications", href: "#solutions" },
+          { label: "EdTech Solutions", href: "#solutions" },
+          { label: "Business Websites", href: "#solutions" },
+          { label: "Full Stack Systems", href: "#solutions" },
+        ],
+      },
+      {
+        heading: "Products",
+        links: [
+          { label: "Gradiate", href: "#products" },
+          { label: "View All Products", href: "#products" },
+        ],
+      },
+      {
+        heading: "Contact",
+        links: [
+          { label: "Get In Touch", href: "#contact" },
+          { label: "Send Email", href: "mailto:hello@thandululo.tech" },
+        ],
+      },
+    ],
+    socials: [
+      { label: "GitHub", href: "https://github.com/" },
+      { label: "LinkedIn", href: "https://www.linkedin.com/" },
+      { label: "Twitter", href: "https://twitter.com/" },
+    ],
+    legal: "© 2026 THANDULULO TECHNOLOGIES. All Rights Reserved.",
+  } satisfies FooterContent,
 } as const;

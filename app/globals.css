@@ -9,14 +9,14 @@
   prefersdark: true;
   color-scheme: dark;
 
-  --color-base-100: #050507;
-  --color-base-200: #0a0a11;
-  --color-base-300: #10111a;
-  --color-base-content: #f4f7fb;
+  --color-base-100: #0d0d0f;
+  --color-base-200: #111115;
+  --color-base-300: #18181e;
+  --color-base-content: #f0f2f8;
 
-  --color-primary: #9f7aea;
-  --color-primary-content: #050507;
-  --color-secondary: #7c5cff;
+  --color-primary: #7c3aed;
+  --color-primary-content: #ffffff;
+  --color-secondary: #6d28d9;
   --color-secondary-content: #f8f5ff;
   --color-accent: #c4b5fd;
   --color-accent-content: #09090f;
@@ -54,13 +54,13 @@ html {
 
 body {
   min-height: 100vh;
-  color: #f4f7fb;
+  color: #f0f2f8;
   font-family: var(--font-sora), sans-serif;
   background:
-    radial-gradient(circle at 12% 20%, rgba(159, 122, 234, 0.25), transparent 30%),
-    radial-gradient(circle at 88% 14%, rgba(124, 92, 255, 0.18), transparent 26%),
-    radial-gradient(circle at 50% 110%, rgba(91, 59, 184, 0.22), transparent 38%),
-    #050507;
+    radial-gradient(circle at 10% 15%, rgba(124, 58, 237, 0.18), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(109, 40, 217, 0.12), transparent 24%),
+    radial-gradient(circle at 50% 105%, rgba(91, 33, 182, 0.14), transparent 32%),
+    #0d0d0f;
 }
 
 body::before {
@@ -134,7 +134,7 @@ button {
 .shadow-glow {
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.06),
-    0 18px 50px -30px rgba(159, 122, 234, 0.75);
+    0 18px 50px -30px rgba(124, 58, 237, 0.8);
 }
 
 .hero-orb {
