@@ -1,5 +1,5 @@
 import { GitBranch, Link, Mail, Send, X } from "lucide-react";
-import type { BrandContent, FooterContent } from "@/data/site-content";
+import type { BrandContent, FooterContent } from "../data/site-content";
 
 type FooterProps = {
   brand: BrandContent;
@@ -32,10 +32,7 @@ export function Footer({ brand, footer }: FooterProps) {
             <p className="max-w-xs text-sm leading-7 text-base-content/55">
               {footer.newsletterDescription}
             </p>
-            <form
-              onSubmit={(e) => e.preventDefault()}
-              className="flex max-w-xs overflow-hidden rounded-full border border-white/12 bg-white/5"
-            >
+            <form className="flex max-w-xs overflow-hidden rounded-full border border-white/12 bg-white/5">
               <div className="flex flex-1 items-center gap-2 px-4 py-2.5">
                 <Mail className="size-4 shrink-0 text-base-content/35" />
                 <input
@@ -45,7 +42,7 @@ export function Footer({ brand, footer }: FooterProps) {
                 />
               </div>
               <button
-                type="submit"
+                type="button"
                 aria-label="Subscribe"
                 className="flex size-10 shrink-0 items-center justify-center rounded-full bg-primary text-primary-content transition-opacity hover:opacity-80"
               >
