@@ -1,9 +1,9 @@
-
+import Profile from './components/Profile.jsx'
 
 export default function Home() {
   return (
     <>
-      
+      <Profile/>
     </>
   );
 }
