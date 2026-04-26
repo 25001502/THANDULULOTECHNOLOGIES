@@ -1,159 +1,145 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
-:root {
-  color-scheme: dark;
+/* ── Font utilities ── */
+.font-manrope { font-family: var(--font-manrope, 'Manrope'), sans-serif; }
+
+/* ── Animations ── */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-html {
-  scroll-behavior: smooth;
+@keyframes border-spin {
+  from { --gradient-angle: 0deg; }
+  to   { --gradient-angle: 360deg; }
 }
 
-body {
-  margin: 0;
-  background: #08090b;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes animStar {
+  from { transform: translateY(0px); }
+  to   { transform: translateY(-2000px); }
 }
 
-.page-grid {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
-  background-size: 56px 56px;
-  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 92%);
-  mask-image: radial-gradient(circle at center, black 40%, transparent 92%);
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
 
-.page-glow {
-  background:
-    radial-gradient(circle at 14% 18%, rgba(124, 58, 237, 0.14), transparent 25%),
-    radial-gradient(circle at 78% 12%, rgba(76, 29, 149, 0.12), transparent 28%),
-    radial-gradient(circle at 84% 70%, rgba(91, 33, 182, 0.08), transparent 20%);
+.animate-fade-up {
+  animation: fade-in-up 0.8s ease-out forwards;
 }
 
-.hero-lines {
-  background-image:
-    radial-gradient(circle at 70% 22%, rgba(124, 58, 237, 0.16), transparent 20%),
-    repeating-radial-gradient(circle at 62% 18%, rgba(255, 255, 255, 0.08) 0, rgba(255, 255, 255, 0.08) 1px, transparent 1px, transparent 44px);
+/* ── Stars ── */
+.stars-1 {
+  background: transparent;
+  box-shadow:
+    234px 124px #fff, 654px 345px #fff, 876px 12px #fff,
+    1200px 800px #fff, 400px 1500px #fff, 1800px 200px #fff,
+    100px 1000px #fff, 900px 1900px #fff, 500px 600px #fff,
+    1400px 100px #fff, 300px 400px #fff, 1600px 1200px #fff,
+    700px 750px #fff, 1050px 1400px #fff, 250px 1700px #fff,
+    1700px 650px #fff, 50px 300px #fff, 1350px 1600px #fff;
+  animation: animStar 50s linear infinite;
 }
 
-.window-grid {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.28) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.28) 1px, transparent 1px);
-  background-size: 14px 14px;
+.stars-2 {
+  background: transparent;
+  box-shadow:
+    123px 456px #fff, 789px 234px #fff, 456px 890px #fff,
+    1100px 300px #fff, 200px 1200px #fff, 1500px 500px #fff,
+    600px 1700px #fff, 1300px 900px #fff;
+  animation: animStar 80s linear infinite;
 }
 
-.section-shell {
-  margin-inline: auto;
-  max-width: 1600px;
-  padding: 6rem 1.5rem;
-}
-
-@media (min-width: 1024px) {
-  .section-shell {
-    padding: 7rem 2.5rem;
-  }
-}
-
-.surface-card {
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.015);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
-  -webkit-backdrop-filter: blur(8px);
+/* ── Top gradient blur ── */
+.gradient-blur {
+  position: fixed;
+  z-index: 40;
+  inset: 0 0 auto 0;
+  height: 120px;
+  pointer-events: none;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
   backdrop-filter: blur(8px);
+  -webkit-mask-image: linear-gradient(to bottom, black, transparent);
+  mask-image: linear-gradient(to bottom, black, transparent);
 }
 
-.btn-dark,
-.btn-primary-purple,
-.icon-button {
-  transition: 180ms ease;
-}
-
-.btn-dark {
-  display: inline-flex;
-  height: 3.75rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  padding-inline: 1.4rem;
-  font-size: 1.05rem;
-  color: white;
-  text-decoration: none;
-}
-
-.btn-dark:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.btn-primary-purple {
-  display: inline-flex;
-  height: 3.75rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1rem;
-  background: linear-gradient(180deg, #8b5cf6 0%, #7c3aed 100%);
-  padding-inline: 1.6rem;
-  font-size: 1.05rem;
-  color: white;
-  text-decoration: none;
-  box-shadow: 0 16px 40px rgba(124, 58, 237, 0.24);
-}
-
-.btn-primary-purple:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 22px 44px rgba(124, 58, 237, 0.3);
-}
-
-.icon-button {
-  display: inline-flex;
-  height: 3.75rem;
-  width: 3.75rem;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(255, 255, 255, 0.02);
-  color: rgba(255, 255, 255, 0.8);
-}
-
-.icon-button:hover {
-  border-color: rgba(255, 255, 255, 0.16);
-  background: rgba(255, 255, 255, 0.05);
-  color: white;
-}
-
-.cta-shell {
+/* ── Shiny CTA Button ── */
+.shiny-cta {
+  --gradient-angle: 0deg;
   position: relative;
-}
-
-.cta-panel {
+  overflow: hidden;
+  border-radius: 9999px;
+  padding: 1rem 2.5rem;
   background:
-    radial-gradient(circle at 20% 100%, rgba(255, 255, 255, 0.03), transparent 22%),
-    radial-gradient(circle at 82% 100%, rgba(255, 255, 255, 0.03), transparent 22%),
-    linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.008));
+    linear-gradient(#000, #000) padding-box,
+    conic-gradient(
+      from var(--gradient-angle),
+      transparent 0%,
+      #ef233c 5%,
+      #ef233c 30%,
+      transparent 40%,
+      transparent 100%
+    ) border-box;
+  border: 2px solid transparent;
+  cursor: pointer;
+  isolation: isolate;
+  animation: border-spin 2.5s linear infinite;
+  display: inline-block;
 }
 
-.cta-panel::before,
-.cta-panel::after {
-  content: "";
+.shiny-cta::before {
+  content: '';
   position: absolute;
-  bottom: -18%;
-  width: 24%;
-  aspect-ratio: 1;
-  opacity: 0.12;
-  background-image: linear-gradient(rgba(255, 255, 255, 0.14) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.14) 1px, transparent 1px);
-  background-size: 36px 36px;
-  transform: perspective(700px) rotateX(74deg);
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, white 0.5px, transparent 0);
+  background-size: 4px 4px;
+  opacity: 0.08;
+  z-index: 0;
 }
 
-.cta-panel::before {
-  left: -3%;
+/* ── Text stroke (watermark) ── */
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.1);
+  color: transparent;
 }
 
-.cta-panel::after {
-  right: -3%;
+/* ── Red selection ── */
+.selection-red *::selection {
+  background: #ef233c;
+  color: white;
 }
+
+/* ── Background helpers ── */
+.bg-red-glow-blob {
+  background: rgba(239, 35, 60, 0.05);
+}
+
+.bg-grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+  mask-image: radial-gradient(circle at center, black 40%, transparent 80%);
+}
+
+/* ── Gradient text ── */
+.text-gradient-white {
+  background-image: linear-gradient(to bottom, #fff 0%, #fff 60%, rgba(255,255,255,0.35) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ── Card glow overlays ── */
+.glow-red   { background: radial-gradient(circle at top right, #ef233c, transparent 70%); }
+.glow-blue  { background: radial-gradient(circle at top right, #3b82f6, transparent 70%); }
+.glow-yellow { background: radial-gradient(circle at top right, #eab308, transparent 70%); }
+.glow-purple { background: radial-gradient(circle at top right, #a855f7, transparent 70%); }
+
+/* ── Animation delays ── */
+.delay-150 { animation-delay: 0.15s; }
+.delay-300 { animation-delay: 0.30s; }
+.delay-450 { animation-delay: 0.45s; }

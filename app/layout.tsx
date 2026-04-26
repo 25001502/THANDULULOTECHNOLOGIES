@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
-import { IBM_Plex_Mono, Sora } from "next/font/google";
+import { IBM_Plex_Mono, Manrope, Sora } from "next/font/google";
 import "./globals.css";
 
 const sora = Sora({
   variable: "--font-sora",
+  subsets: ["latin"],
+  display: "swap",
+});
+
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
   display: "swap",
 });
@@ -48,9 +54,9 @@ export default function RootLayout({
     <html
       lang="en"
       data-theme="thandululo"
-      className={`${sora.variable} ${ibmPlexMono.variable} h-full scroll-smooth antialiased`}
+      className={`${sora.variable} ${manrope.variable} ${ibmPlexMono.variable} h-full scroll-smooth antialiased`}
     >
-      <body className="min-h-full bg-base-100 text-base-content">{children}</body>
+      <body className="min-h-full bg-black text-white">{children}</body>
     </html>
   );
 }

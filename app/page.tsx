@@ -1,9 +1,9 @@
-import Profile from './components/Profile.jsx'
+import HomePage from "./components/Profile";
 
 export default function Home() {
   return (
     <>
-      <Profile/>
+      <HomePage />
     </>
   );
 }
