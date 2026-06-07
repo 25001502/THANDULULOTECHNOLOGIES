@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import Link from 'next/link'
 import {
   ArrowRight, Check, Menu, X,
   Globe, GraduationCap, Building2, Database,
@@ -31,6 +32,13 @@ const serviceGlowClasses: Record<ServiceIconKey, string> = {
   systems: 'glow-purple',
 }
 
+const servicePaths: Record<ServiceIconKey, string> = {
+  web: '/services/web-development',
+  edtech: '/services/educational-technology',
+  business: '/services',
+  systems: '/services',
+}
+
 export default function Profile() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -56,10 +64,10 @@ export default function Profile() {
         <nav className="max-w-5xl mx-auto flex items-center justify-between bg-black/60 backdrop-blur-xl border border-white/10 rounded-full px-6 py-3 shadow-2xl">
 
           {/* Logo */}
-          <div className="flex items-center gap-2 shrink-0">
+          <Link href="/" className="flex items-center gap-2 shrink-0">
             <div className="w-5 h-5 bg-[#ef233c] rounded-sm rotate-45" />
             <span className="text-base font-bold font-manrope tracking-tight">TT</span>
-          </div>
+          </Link>
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
@@ -220,6 +228,11 @@ export default function Profile() {
                 const Icon = serviceIcons[s.icon]
                 return (
                   <div className="lg:col-span-2 lg:row-span-2 group relative overflow-hidden p-8 border border-white/10 bg-gradient-to-b from-zinc-900/50 to-black hover:border-white/20 transition-all rounded-xl">
+                    <a
+                      href={servicePaths[s.icon]}
+                      aria-label={`Learn more about ${s.title}`}
+                      className="absolute inset-0 z-20"
+                    />
                     <div className="relative z-10 h-full flex flex-col">
                       <div className={`mb-6 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 ${serviceIconColors[s.icon]}`}>
                         <Icon className="w-6 h-6" />
@@ -249,6 +262,11 @@ export default function Profile() {
                 const Icon = serviceIcons[s.icon]
                 return (
                   <div className="lg:col-span-2 group relative overflow-hidden p-8 border border-white/10 bg-black hover:border-white/20 transition-all rounded-xl">
+                    <a
+                      href={servicePaths[s.icon]}
+                      aria-label={`Learn more about ${s.title}`}
+                      className="absolute inset-0 z-20"
+                    />
                     <div className="relative z-10 flex flex-col h-full">
                       <div className={`mb-4 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 ${serviceIconColors[s.icon]}`}>
                         <Icon className="w-6 h-6" />
@@ -266,6 +284,11 @@ export default function Profile() {
                 const Icon = serviceIcons[s.icon]
                 return (
                   <div key={s.title} className="group relative overflow-hidden p-8 border border-white/10 bg-black hover:border-white/20 transition-all rounded-xl">
+                    <a
+                      href={servicePaths[s.icon]}
+                      aria-label={`Learn more about ${s.title}`}
+                      className="absolute inset-0 z-20"
+                    />
                     <div className="relative z-10">
                       <div className={`mb-4 inline-flex p-3 rounded-lg bg-white/5 border border-white/10 ${serviceIconColors[s.icon]}`}>
                         <Icon className="w-6 h-6" />

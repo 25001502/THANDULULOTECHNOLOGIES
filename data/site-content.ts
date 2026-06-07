@@ -201,11 +201,11 @@ export const siteContent = {
     location: "South Africa",
   } satisfies BrandContent,
   navigation: [
-    { label: "Home", href: "#top" },
-    { label: "Solutions", href: "#solutions" },
-    { label: "Products", href: "#products" },
-    { label: "About", href: "#about" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/" },
+    { label: "Solutions", href: "/services" },
+    { label: "Products", href: "/products/gradiate" },
+    { label: "About", href: "/about" },
+    { label: "Contact", href: "/contact" },
   ] satisfies NavLink[],
   hero: {
     eyebrow: "Digital Solutions Company",
@@ -394,7 +394,7 @@ export const siteContent = {
           "Digital Empowerment",
         ],
         actions: [
-          { label: "Learn More", href: "#contact" },
+          { label: "Learn More", href: "/products/gradiate" },
           { label: "Discuss Product", href: "#contact" },
         ],
         highlights: [
