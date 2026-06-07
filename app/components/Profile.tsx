@@ -299,7 +299,12 @@ export default function Profile() {
                 TN
               </div>
               <div className="text-left">
-                <div className="text-black font-bold text-lg">{brand.founderName}</div>
+                <a
+                  href="/about/thandululo-nengovhela"
+                  className="text-black font-bold text-lg underline-offset-4 hover:underline"
+                >
+                  {brand.founderName}
+                </a>
                 <div className="text-black/70 font-medium">Founder, {brand.name}</div>
               </div>
             </div>
@@ -443,7 +448,12 @@ export default function Profile() {
 
         <div className="max-w-7xl mx-auto px-6 border-t border-zinc-900 pt-8 flex flex-col md:flex-row items-center justify-between text-zinc-600 text-[10px] uppercase tracking-widest gap-4">
           <p>&copy; {new Date().getFullYear()} {brand.name}. All rights reserved.</p>
-          <p>{brand.founderLine}</p>
+          <a
+            href="/about/thandululo-nengovhela"
+            className="transition-colors hover:text-zinc-300"
+          >
+            {brand.founderLine}
+          </a>
         </div>
       </footer>
 

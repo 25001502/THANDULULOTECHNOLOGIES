@@ -517,14 +517,14 @@ export const siteContent = {
     title: "Let's Build Something Meaningful",
     description:
       "If you need a product-minded technology company to shape a platform, website, or digital solution, start the conversation here.",
-    email: "hello@thandululo.tech",
-    primaryCta: { label: "Let's Talk", href: "mailto:hello@thandululo.tech" },
+    email: "thandululo99@gmail.com",
+    primaryCta: { label: "Let's Talk", href: "mailto:thandululo99@gmail.com" },
     socials: [
       {
         label: "Email",
         description:
           "The best channel for project inquiries, solution discussions, and business conversations.",
-        href: "mailto:hello@thandululo.tech",
+        href: "mailto:thandululo99@gmail.com",
       },
       {
         label: "GitHub",
