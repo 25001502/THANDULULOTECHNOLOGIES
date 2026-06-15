@@ -205,6 +205,7 @@ export const siteContent = {
     { label: "Solutions", href: "/services" },
     { label: "Products", href: "/products/gradiate" },
     { label: "About", href: "/about" },
+    { label: "Insights", href: "/insights" },
     { label: "Contact", href: "/contact" },
   ] satisfies NavLink[],
   hero: {

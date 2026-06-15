@@ -39,6 +39,17 @@ const servicePaths: Record<ServiceIconKey, string> = {
   systems: '/services',
 }
 
+const insightLinks = [
+  {
+    label: 'Scalable web platforms',
+    href: '/insights/building-scalable-web-platforms',
+  },
+  {
+    label: 'Useful EdTech platforms',
+    href: '/insights/designing-useful-edtech-platforms',
+  },
+]
+
 export default function Profile() {
   const [menuOpen, setMenuOpen] = useState(false)
 
@@ -439,7 +450,7 @@ export default function Profile() {
 
       {/* ── Footer ── */}
       <footer id="about" className="bg-black border-t border-zinc-900 pt-20 pb-10 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 mb-20 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-20 relative z-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
               <div className="w-5 h-5 bg-[#ef233c] rounded-sm rotate-45 shrink-0" />
@@ -455,6 +466,16 @@ export default function Profile() {
             <ul className="space-y-4 text-zinc-400 text-sm">
               {navigation.map(link => (
                 <li key={link.label}>
+                  <a href={link.href} className="hover:text-white transition-colors">{link.label}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-xs font-bold text-[#ef233c] uppercase tracking-widest mb-6">Insights</h4>
+            <ul className="space-y-4 text-zinc-400 text-sm">
+              {insightLinks.map(link => (
+                <li key={link.href}>
                   <a href={link.href} className="hover:text-white transition-colors">{link.label}</a>
                 </li>
               ))}
