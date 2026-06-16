@@ -195,7 +195,7 @@ export const siteContent = {
     founderName: "Thandululo Nengovhela",
     founderLine: "Founded by Thandululo Nengovhela",
     domain: "thandululo.tech",
-    email: "hello@thandululo.tech",
+    email: "thandululo99@gmail.com",
     tagline:
       "Digital products, platforms, and modern web solutions built for impact and growth.",
     location: "South Africa",
@@ -531,13 +531,13 @@ export const siteContent = {
         label: "GitHub",
         description:
           "Use this slot for repositories, technical case studies, and public product work.",
-        href: "https://github.com/",
+        href: "https://github.com/25001502",
       },
       {
         label: "LinkedIn",
         description:
           "Use this slot for business presence, founder profile context, and professional outreach.",
-        href: "https://www.linkedin.com/",
+        href: "https://www.linkedin.com/in/nengovhela-thandululo-880080367/",
       },
     ],
   } satisfies ContactContent,
@@ -655,14 +655,16 @@ export const siteContent = {
         heading: "Contact",
         links: [
           { label: "Get In Touch", href: "#contact" },
-          { label: "Send Email", href: "mailto:hello@thandululo.tech" },
+          { label: "Send Email", href: "mailto:thandululo99@gmail.com" },
         ],
       },
     ],
     socials: [
-      { label: "GitHub", href: "https://github.com/" },
-      { label: "LinkedIn", href: "https://www.linkedin.com/" },
-      { label: "Twitter", href: "https://twitter.com/" },
+      { label: "GitHub", href: "https://github.com/25001502" },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/nengovhela-thandululo-880080367/",
+      },
     ],
     legal: "© 2026 THANDULULO TECHNOLOGIES. All Rights Reserved.",
   } satisfies FooterContent,

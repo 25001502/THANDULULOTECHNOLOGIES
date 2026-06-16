@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from 'react'
+import Image from 'next/image'
 import Link from 'next/link'
 import {
   ArrowRight, Check, Menu, X,
@@ -133,7 +134,7 @@ export default function Profile() {
               onClick={() => setMenuOpen(false)}
               className="text-sm font-bold text-[#ef233c] hover:text-red-300 transition-colors"
             >
-              Get In Touch →
+              Get In Touch -&gt;
             </a>
           </div>
         )}
@@ -144,6 +145,14 @@ export default function Profile() {
         {/* ── Hero ── */}
         <section id="top" className="min-h-screen flex flex-col items-center justify-center pt-32 pb-20 px-6">
           <div className="text-center max-w-5xl mx-auto">
+            <Image
+              src="/images/thandululo-technologies-wordmark.png"
+              alt="THANDULULO TECHNOLOGIES"
+              width={1288}
+              height={420}
+              priority
+              className="mx-auto mb-8 h-auto w-full max-w-[560px] animate-fade-up opacity-95"
+            />
 
             {/* Eyebrow badge */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-8 animate-fade-up">
@@ -458,7 +467,7 @@ export default function Profile() {
             </div>
             <p className="text-zinc-500 max-w-xs leading-relaxed">{brand.tagline}</p>
             <p className="text-zinc-700 text-xs mt-4 uppercase tracking-widest">
-              {brand.location} · {brand.domain}
+              {brand.location} / {brand.domain}
             </p>
           </div>
           <div>

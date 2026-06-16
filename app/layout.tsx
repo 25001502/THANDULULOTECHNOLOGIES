@@ -2,10 +2,13 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Manrope, Sora } from "next/font/google";
 import "./globals.css";
 import {
+  CONTACT_EMAIL,
   FOUNDER_ID,
   FOUNDER_PROFILES,
   FOUNDER_URL,
   ORGANIZATION_ID,
+  SOCIAL_IMAGE,
+  SOCIAL_IMAGE_PATH,
   SITE_URL,
 } from "./seo-config";
 
@@ -77,12 +80,14 @@ export const metadata: Metadata = {
     siteName: "THANDULULO TECHNOLOGIES",
     locale: "en_ZA",
     type: "website",
+    images: [SOCIAL_IMAGE],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "THANDULULO TECHNOLOGIES | Founded by Thandululo Nengovhela",
     description:
       "South African digital solutions company building scalable products, web platforms, and software.",
+    images: [SOCIAL_IMAGE_PATH],
   },
 };
 
@@ -94,7 +99,7 @@ const structuredData = {
       "@id": ORGANIZATION_ID,
       name: "THANDULULO TECHNOLOGIES",
       url: SITE_URL,
-      email: "thandululo99@gmail.com",
+      email: CONTACT_EMAIL,
       description:
         "A South African digital solutions company building web platforms, educational technology, and modern software products.",
       founder: {

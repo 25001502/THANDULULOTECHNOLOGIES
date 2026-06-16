@@ -4,6 +4,7 @@ import {
   ContentPage,
   ContentSection,
 } from "../components/ContentPage";
+import { ContactForm } from "../components/ContactForm";
 import { ORGANIZATION_ID, SITE_URL, createPageMetadata } from "../seo-config";
 import { siteContent } from "@/data/site-content";
 
@@ -28,6 +29,11 @@ const schema = {
   name: "Contact THANDULULO TECHNOLOGIES",
   url: `${SITE_URL}${path}`,
   about: { "@id": ORGANIZATION_ID },
+  mainEntity: {
+    "@type": "Organization",
+    "@id": ORGANIZATION_ID,
+    email: siteContent.contact.email,
+  },
 };
 
 export default function ContactPage() {
@@ -56,14 +62,9 @@ export default function ContactPage() {
       ]}
       schema={schema}
     >
-      <ContentSection title="Start the conversation">
+      <ContentSection title="Project inquiry">
         <p>{contact.description}</p>
-        <a
-          href={`mailto:${contact.email}`}
-          className="inline-flex rounded-full bg-[#ef233c] px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-red-700"
-        >
-          {contact.email}
-        </a>
+        <ContactForm />
       </ContentSection>
 
       <ContentSection title="What to include">
@@ -110,4 +111,3 @@ export default function ContactPage() {
     </ContentPage>
   );
 }
-

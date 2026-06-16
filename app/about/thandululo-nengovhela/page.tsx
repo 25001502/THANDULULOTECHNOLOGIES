@@ -6,6 +6,8 @@ import {
   FOUNDER_PROFILES,
   FOUNDER_URL,
   ORGANIZATION_ID,
+  SOCIAL_IMAGE,
+  SOCIAL_IMAGE_PATH,
 } from "../../seo-config";
 
 export const metadata: Metadata = {
@@ -28,6 +30,14 @@ export const metadata: Metadata = {
       "Founder building practical digital products, web platforms, educational technology, and modern software solutions.",
     url: FOUNDER_URL,
     type: "profile",
+    images: [SOCIAL_IMAGE],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Thandululo Nengovhela | Founder of THANDULULO TECHNOLOGIES",
+    description:
+      "Founder building practical digital products, web platforms, educational technology, and modern software solutions.",
+    images: [SOCIAL_IMAGE_PATH],
   },
 };
 
@@ -137,4 +147,3 @@ export default function ThandululoNengovhelaPage() {
     </main>
   );
 }
-
