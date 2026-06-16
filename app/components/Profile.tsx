@@ -77,7 +77,15 @@ export default function Profile() {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-5 h-5 bg-[#ef233c] rounded-sm rotate-45" />
+            <span className="relative block h-5 w-5 shrink-0 overflow-hidden">
+              <Image
+                src="/images/thandululo-technologies-navbar-mark.png"
+                alt=""
+                fill
+                sizes="20px"
+                className="object-contain"
+              />
+            </span>
             <span className="text-base font-bold font-manrope tracking-tight">TT</span>
           </Link>
 
